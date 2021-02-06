@@ -9,7 +9,36 @@
 </head>
 
 <body>
+    </p>Select Timezone: </p>
+    <form>
+        <input type="radio" name="tz" value="est"> Eastern Standard Time <br>
 
+        <input type="radio" name="tz" value="cst"> Central Standard Time <br>
+
+        <input type="radio" name="tz" value="mst"> Mountain Standard Time <br>
+
+        <input type="radio" name="tz" value="pst"> Pacific Standard Time <br>
+
+        <input type="radio" name="tz" value="ast"> Alaska Standard Time <br>
+
+        <input type="radio" name="tz" value="hast"> Hawaii-Aleutian Standard Time <br>
+    </form>
+    <button type="button" value="Submit" onclick="myFunc()">Submit</button>
+    <div id="ex"></div>
 </body>
+<script>
+    function myFunc() {
+        var radioButtons = document.getElementById("tz");
+        var selected = radioButtons[0];
+        for (var i = 0; i < radioButtons.length; i++) {
+            if (radioButtons[i].checked == true) {
+                selected = radioButtons[i];
+            }
+        }
+
+        var elem = document.getElementById("ex");
+        elem.innerHTML = selected.value;
+    }
+</script>
 
 </html>
