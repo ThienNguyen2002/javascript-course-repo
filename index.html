@@ -23,22 +23,12 @@
 
         <input type="radio" name="tz" value="hast"> Hawaii-Aleutian Standard Time <br>
     </form>
-    <button type="button" value="Submit" onclick="myFunc()">Submit</button>
-    <div id="ex"></div>
+    <button type="button" value="Submit" onclick="randForm()">Submit</button>
+    <div id="result"></div>
 </body>
-<script>
-    function myFunc() {
-        var radioButtons = document.getElementById("tz");
-        var selected = radioButtons[0];
-        for (var i = 0; i < radioButtons.length; i++) {
-            if (radioButtons[i].checked == true) {
-                selected = radioButtons[i];
-            }
-        }
+<script type="">
 
-        var elem = document.getElementById("ex");
-        elem.innerHTML = selected.value;
-    }
-</script>
+    function readForm(){ var myVariable = value; var radioButtons = document.getElementsByName("tz"); for (var i = 0; i
+    < radioButtons.length; i++){ if (radioButtons[i].checked==true){ radioButtons[i].value; document.getElementById( "result").innerHTML=output;} } } </script>
 
 </html>
